@@ -47,7 +47,11 @@
         <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    {{if .Username}}
+                    你好，{{.Username}}
+                    {{else}}
                     选项
+                    {{end}}
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="/">上传测试版</a></li>
@@ -59,6 +63,35 @@
                   </ul>
                 </li>
             </ul>
+      </div>
+    </div>
+
+    </br>
+    </br>
+    </br>
+
+    <div class="media">
+      <a class="pull-left media-object" href="/">
+        <img class="icon" src="/static/img/icon.png"/>
+      </a>
+      <div class="media-body">
+        <h4>
+        <a href="/">{{.Appname}}</a>
+        </h4>
+        <p class="text-muted">
+        <a href="/">
+          {{.Version}} ({{.Build}})<br />
+        </a>
+        </p>
+        <div class="hidden-xs hidden-sm">
+          <button type="button" class="btn btn-default btn-small")>
+          <span class="glyphicon glyphicon-qrcode"></span> 扫描二维码
+          </button>
+          <a href="/" class="btn btn-default">
+            <span class="glyphicon glyphicon-info-sign"></span> 详细信息
+          </a>
+        </div>
+        <hr style="margin-bottom:0;"/>
       </div>
     </div>
 
